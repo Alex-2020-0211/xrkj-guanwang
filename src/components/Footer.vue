@@ -2,7 +2,7 @@
   <div class="footer">
     <div class="footerTop">
       <h5>{{ footerData.title }}</h5>
-      <button>免费体验</button>
+      <button @click="tiyan()">免费体验</button>
     </div>
     <div class="footerBottom">
       <div class="detail">
@@ -39,7 +39,9 @@
           </dt>
           <dd>sdasdsad@qq.com</dd>
         </dl>
-        <p><img src="../assets/img/LOGO@2x.png" alt="" /><span>NICETEAM</span></p>
+        <p>
+          <img src="../assets/img/LOGO@2x.png" alt="" /><span>NICETEAM</span>
+        </p>
       </div>
     </div>
   </div>
@@ -56,7 +58,11 @@ export default {
   data() {
     return {};
   },
-  methods: {},
+  methods: {
+    tiyan() {
+      this.$router.replace("/connect");
+    },
+  },
 };
 </script>
 
@@ -82,6 +88,9 @@ export default {
       font-size: 0.18rem;
       border: 0;
       border-radius: 0.05rem;
+    }
+    button:active {
+      border: 0.01rem solid #000;
     }
   }
   .footerBottom {
